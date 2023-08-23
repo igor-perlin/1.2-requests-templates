@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список блюд</title>
+</head>
+<body>
+    <h1>Список блюд</h1>
+    <ul>
+        {% for dish in dishes %}
+            <li><a href="{% url 'dish_detail' dish.id %}">{{ dish.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

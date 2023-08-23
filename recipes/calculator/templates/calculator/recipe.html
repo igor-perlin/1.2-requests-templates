@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Ingredients</title>
+</head>
+<body>
+    <h1>Ingredients for {{ recipe|length }} serving(s)</h1>
+    <ul>
+        {% for ingredient, amount in recipe.items %}
+            <li>{{ ingredient }}: {{ amount }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
